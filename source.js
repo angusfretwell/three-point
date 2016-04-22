@@ -42,8 +42,8 @@ export default class ThreePoint {
     return parseFloat(this._expected.toPrecision(2));
   }
 
-  get pessemistic() {
-    return parseFloat(this._pessemistic.toPrecision(2));
+  get pessimistic() {
+    return parseFloat(this._pessimistic.toPrecision(2));
   }
 
   get optimistic() {
@@ -79,7 +79,7 @@ export default class ThreePoint {
       .reduce((a, b) => a + b);
 
     this._expected = expected;
-    this._pessemistic = expected + (standardDeviation * this._criticalValue);
+    this._pessimistic = expected + (standardDeviation * this._criticalValue);
     this._optimistic = expected - (standardDeviation * this._criticalValue);
   }
 

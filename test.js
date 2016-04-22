@@ -12,7 +12,7 @@ describe('three-point', () => {
     ], 0.90);
 
     estimate.expected.should.equal(8.7);
-    estimate.pessemistic.should.equal(5.4);
+    estimate.pessimistic.should.equal(5.4);
     estimate.optimistic.should.equal(12);
   });
 });
