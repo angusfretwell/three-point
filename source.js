@@ -43,7 +43,7 @@ export default class ThreePoint {
 
   findCriticalValue(value) {
     const distribution = gaussian(0, 1);
-    return distribution.ppf((1 - value) / 2);
+    return distribution.ppf((1 + value) / 2);
   }
 
   estimate() {
