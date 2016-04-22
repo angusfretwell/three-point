@@ -19,7 +19,7 @@ import ThreePoint from 'three-point';
 
 const confidence = 0.90;
 
-const tasks = [  {
+const items = [{
   optimistic: 4,
   pessimistic: 16,
   likely: 8,
@@ -27,9 +27,9 @@ const tasks = [  {
   optimistic: 2,
   pessimistic: 3,
   likely: 2.5,
-},];
+}];
 
-const estimate = new ThreePoint(tasks, confidence);
+const estimate = new ThreePoint(items, confidence);
 
 console.log(estimate.expected); // 11
 console.log(estimate.pessimistic); // 14
