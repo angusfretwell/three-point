@@ -14,7 +14,7 @@ describe('three-point', () => {
     estimate.pessimistic.should.equal(12);
   });
 
-  it('should accept only numeric values for tasks', () => {
+  it('should accept only numeric values for items', () => {
     (() => {
       new ThreePoint([{ // eslint-disable-line no-new
         optimistic: 'fail',
