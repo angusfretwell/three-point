@@ -17,17 +17,23 @@ $ npm install --save three-point
 ```js
 import ThreePoint from 'three-point';
 
-const estimate = new ThreePoint([
-  {
-    optimistic: 4,
-    pessimistic: 16,
-    likely: 8,
-  },
-], 0.90);
+const confidence = 0.90;
 
-console.log(estimate.expected); // 8.7
-console.log(estimate.pessimistic); // 5.4
-console.log(estimate.optimistic); // 12
+const tasks = [  {
+  optimistic: 4,
+  pessimistic: 16,
+  likely: 8,
+}, {
+  optimistic: 2,
+  pessimistic: 3,
+  likely: 2.5,
+},];
+
+const estimate = new ThreePoint(tasks, confidence);
+
+console.log(estimate.expected); // 11
+console.log(estimate.pessimistic); // 14
+console.log(estimate.optimistic); // 7.9
 ```
 
 ## License
