@@ -1,7 +1,6 @@
 import gaussian from 'gaussian';
 
 export default class ThreePoint {
-  _hoursPerDay = 6.5;
   _confidenceLevel = 0.9;
 
   constructor(items, confidenceLevel) {
@@ -25,14 +24,6 @@ export default class ThreePoint {
     this.estimate();
   }
 
-  set hoursPerDay(value) {
-    if (isNaN(value)) {
-      throw new Error('Encountered a non-number hours per day');
-    }
-
-    this._hoursPerDay = value;
-  }
-
   set confidenceLevel(value) {
     this._criticalValue = this.findCriticalValue(value);
     this.estimate();
@@ -48,18 +39,6 @@ export default class ThreePoint {
 
   get optimistic() {
     return parseFloat(this._optimistic.toPrecision(2));
-  }
-
-  get expectedDays() {
-    return this._expected / this._hoursPerDay;
-  }
-
-  get pessimisticDays() {
-    return this._pessimistic / this._hoursPerDay;
-  }
-
-  get optimisticDays() {
-    return this._optimistic / this._hoursPerDay;
   }
 
   findCriticalValue(value) {
