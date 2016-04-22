@@ -47,7 +47,7 @@ export default class ThreePoint {
   }
 
   estimate() {
-    const estimates = this._items.map(this.estimateTask);
+    const estimates = this._items.map(this.estimateItem);
 
     const standardDeviation = Math.sqrt(estimates
       .map(x => Math.pow(x.standardDeviation, 2))
@@ -62,7 +62,7 @@ export default class ThreePoint {
     this._optimistic = expected - (standardDeviation * this._criticalValue);
   }
 
-  estimateTask({ optimistic, pessimistic, likely }) {
+  estimateItem({ optimistic, pessimistic, likely }) {
     return {
       standardDeviation: (pessimistic - optimistic) / 6,
       expected: (optimistic + 4 * likely + pessimistic) / 6,
