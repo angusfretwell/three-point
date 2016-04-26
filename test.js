@@ -7,7 +7,7 @@ describe('three-point', () => {
       optimistic: 4,
       pessimistic: 16,
       likely: 8,
-    }], 0.90);
+    }]);
 
     estimate.expected.should.equal(8.7);
     estimate.optimistic.should.equal(5.4);
