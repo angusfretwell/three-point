@@ -24,15 +24,15 @@ export default class ThreePoint {
   }
 
   get expected() {
-    return parseFloat(this._expected.toPrecision(2));
+    return Math.round(this._expected * 10) / 10;
   }
 
   get pessimistic() {
-    return parseFloat(this._pessimistic.toPrecision(2));
+    return Math.round(this._pessimistic * 10) / 10;
   }
 
   get optimistic() {
-    return parseFloat(this._optimistic.toPrecision(2));
+    return Math.round(this._optimistic * 10) / 10;
   }
 
   findCriticalValue(value) {
