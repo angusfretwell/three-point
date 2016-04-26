@@ -1,15 +1,9 @@
 import gaussian from 'gaussian';
 
 export default class ThreePoint {
-  _confidenceLevel = 0.9;
-
   constructor(items, confidenceLevel) {
     this.items = items;
-
-    if (confidenceLevel) {
-      this.confidenceLevel = confidenceLevel;
-    }
-
+    this.confidenceLevel = confidenceLevel || 0.9;
     this.estimate();
   }
 
