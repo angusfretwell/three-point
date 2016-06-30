@@ -1,7 +1,7 @@
 {
   "name": "three-point",
   "version": "0.3.0",
-  "description": "",
+  "description": "Create a three-point estimate from a set of best, worst, and likely values.",
   "main": "index.js",
   "scripts": {
     "lint": "eslint source.js",
