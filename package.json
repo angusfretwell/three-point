@@ -35,7 +35,7 @@
     "eslint-plugin-import": "^1.4.0",
     "get-stream": "^2.0.0",
     "mocha": "^2.4.5",
-    "should": "^8.3.1"
+    "should": "^9.0.0"
   },
   "dependencies": {
     "gaussian": "^1.1.0"
